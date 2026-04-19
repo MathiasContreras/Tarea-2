@@ -43,7 +43,7 @@ int main() {
         
        
         float prom_estudiante = suma_estudiante / num_asignaturas; 
-        printf("Estudiante %d  Promedio: %.2f  Nota mas alta: %.2f  Nota mas baja: %.2f\n", 
+        printf("\nEstudiante %d  Promedio: %.2f  Nota mas alta: %.2f  Nota mas baja: %.2f\n", 
                i + 1, prom_estudiante, max_est, min_est);
     }
 
@@ -67,5 +67,11 @@ int main() {
                 reprobados++; 
             }
         }
-    
+            float prom_asignatura = suma_asignatura / num_estudiantes; 
+        printf("\nAsignatura %d -> Promedio: %.2f | Max: %.2f | Min: %.2f | Aprobados: %d | Reprobados: %d\n", 
+               j + 1, prom_asignatura, max_asig, min_asig, aprobados, reprobados);
+    }
+
+    return 0;
+
 }
