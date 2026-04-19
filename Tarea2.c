@@ -1,3 +1,5 @@
+#include<stdio.h>
+
 int main() {
     int num_estudiantes = 5;
     int num_asignaturas = 3;
@@ -7,10 +9,9 @@ int main() {
     float suma_estudiante, suma_asignatura;
     float max_est, min_est, max_asig, min_asig;
     int aprobados, reprobados;
-<<<<<<< HEAD
-}
 
-for (int i = 0; i < num_estudiantes; i++) {
+
+    for (int i = 0; i < num_estudiantes; i++) {
         printf("\n Notas del Estudiante %d \n", i + 1);
         for (int j = 0; j < num_asignaturas; j++) {
            
@@ -45,6 +46,26 @@ for (int i = 0; i < num_estudiantes; i++) {
         printf("Estudiante %d  Promedio: %.2f  Nota mas alta: %.2f  Nota mas baja: %.2f\n", 
                i + 1, prom_estudiante, max_est, min_est);
     }
-=======
+
+    for (int j = 0; j < num_asignaturas; j++) {
+        suma_asignatura = 0;
+        max_asig = calificaciones[0][j];
+        min_asig = calificaciones[0][j];
+        aprobados = 0;
+        reprobados = 0;
+
+        for (int i = 0; i < num_estudiantes; i++) {
+            float nota = calificaciones[i][j];
+            suma_asignatura += nota;
+            
+            if (nota > max_asig) max_asig = nota;
+            if (nota < min_asig) min_asig = nota;
+            
+            if (nota >= 6) { 
+                aprobados++; 
+            } else {
+                reprobados++; 
+            }
+        }
+    
 }
->>>>>>> 0ffe418d0825298bb4f53d31abcc63e8369e40de
